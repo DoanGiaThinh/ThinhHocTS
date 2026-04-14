@@ -68,3 +68,66 @@
 //     if (count1 % 2 === 0) break;
 //     count1++;
 // }
+
+// lesson 24
+// let counter: number = 6;
+
+// do {
+//     console.log("Count do while", counter);
+//     if (counter % 2 === 0) break;
+//     counter++
+// } while (counter < 5);
+// lesson 25
+// let products = [
+//     { name: "Áo", price: 200 },
+//     { name: "Quần", price: 900 },
+//     { name: "Điện thoại", price: 1200 },
+// ]
+
+// for (let i = 0; i < products.length; i++) {
+//     if (products[i].price === 900) break;
+//     console.log("Product: ", products[i])
+// }
+
+// console.log(">>>>>>> Products <<<<<<<", products)
+// lesson 26
+
+// for (let index = 0; index < 9; index++) {
+//     if (index % 2 === 0) continue;
+//     console.log("check index", index);
+// }
+// lesson 27
+
+// function sum(a: number, b: number) {
+//     return a + b;
+// }
+
+// const sum2 = (a: number, b: number) => {
+//     return a + b;
+// }
+
+// console.log("check sum:", sum2(3, 9));
+// lesson 28
+// const sum = (a: number, b: number): number => { // cách 1
+//     return a + b;
+// }
+
+// function sum2(a: number, b: number): number { // cách 2
+//     return a + b;
+// }
+
+// console.log("check sum:", sum(1, 2))
+
+// let a: number = 10;
+
+// a = sum(1, 10)
+
+// lesson 29
+// const sum = (x: number, y: number, z?: number) => { //z?: number : optional params
+//     if (z) {
+//         return x + y + z;
+//     }
+//     return x + y;
+// }
+
+// console.log("check sum4: ", sum(1, 2), sum(1, 2, 3))
