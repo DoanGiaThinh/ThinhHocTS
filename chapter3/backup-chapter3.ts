@@ -131,3 +131,48 @@
 // }
 
 // console.log("check sum4: ", sum(1, 2), sum(1, 2, 3))
+// lesson 30
+// let sum1 = (x: number, y: number, z = false) => { //default params // không cần ép kiểu ở ts
+//     if (z === false) {
+//         return x + y
+//     }
+
+//     if (z)
+//         return x - y;
+
+// }
+// console.log("check sum1: ", sum1(1, 4), sum1(1, 2, true))
+// lesson 31
+// function getTotal(...numbers: number[]): number {
+//     let total = 0;
+//     numbers.forEach((num) => { total += num });
+//     // [10,20].forEach((num) => { total += num });
+//     return total;
+// }
+
+// // console.log(getTotal())
+// // console.log(getTotal(10, 20))
+
+// function getMultiply(n: number, ...m: number[]) {
+//     return m.map((x) => n * x);
+// }
+// // const test31 = getMultiply(11, 1, 2, 3, 4, 5)
+
+// // console.log("check test 31: ", test31)
+
+// function Greet(greeting: string, ...names: string[]) {
+//     return greeting + " " + names.join(", ") + "!"
+// }
+
+// console.log(Greet("Hello", "Thịnh", "OKE"))
+// lesson 32
+// //overloading function // là ghi đè lên thằng trước
+// function addNew(a: number, b: number): number;
+
+// function addNew(a: string, b: string): string;
+
+// function addNew(a: any, b: any) {
+//     return a + b;
+// }
+
+// console.log("Check addNew: ", addNew("", "string"))
