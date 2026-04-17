@@ -176,3 +176,50 @@
 // }
 
 // console.log("Check addNew: ", addNew("", "string"))
+// lesson 33
+// class Person {
+//     ssn: string;
+//     firstName: string;
+//     lastName: string;
+
+//     constructor(ssn: string, firstName: string, lastName: string) {
+//         this.ssn = ssn;
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+
+//     getFullName(): string {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+// //Cách dùng
+// let doanthinh = new Person("123", "Đoàn", "Thịnh");
+// console.log("Check doanthinh: ", doanthinh.getFullName())
+//lesson 34
+// class Employee {
+//     private empCode: string;
+//     private empName: string;
+
+//     constructor(empCode: string, empName: string) {
+//         this.empCode = empCode;
+//         this.empName = empName;
+//     }
+// }
+
+// let emp = new Employee("aaa", "bbb");
+// // emp.empCode = "123";
+// // emp.empName = "Thinh"
+
+// console.log("check emp: ", emp)
+// lesson 35
+
+// class birthDay {
+//     readonly birthday: Date;
+
+//     constructor(birthday: Date) {
+//         this.birthday = birthday;
+//     }
+// }
+
+// let person = new birthDay(new Date(1990, 4, 27));
+// // person.birthday = new Date(1991, 4, 25); // Error
