@@ -223,3 +223,120 @@
 
 // let person = new birthDay(new Date(1990, 4, 27));
 // // person.birthday = new Date(1991, 4, 25); // Error
+// lessson 36
+// class Person {
+//     private _age: number;
+//     public firstName: string;
+//     public lastName: string;
+
+//     constructor(age: number, firstName: string, lastName: string) {
+//         this._age = age;
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+
+//     }
+//     //getter
+//     getAge() {
+//         return this._age;
+//     }
+//     set currentAge(age2: number) {
+//         if (age2 < 0 && age2 > 120) {
+//             throw Error("Invalid age")
+//         }
+//         this._age = age2;
+//     }
+// }
+
+// let person = new Person(23, "Thinh", "Doan");
+// person.currentAge = 25;
+// console.log("Check Age: ", person.getAge()) // getter
+// // person.age = 26; //setter
+// lesson 37 Kế thừa
+// class Person {
+//     constructor(private firstName: string, private lastName: string) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+//     getFullName(): string {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+//     describe(): string {
+//         return `This is ${this.firstName} ${this.lastName}.`;
+//     }
+// }
+
+// // để kế thừa
+
+// class Employee extends Person {
+//     private jobTitle;
+//     constructor(firstName: string, lastName: string, jobTitle: string) {
+//         super(firstName, lastName);
+//         this.jobTitle = jobTitle;
+//     }
+//     //overwrite
+//     describe(): string {
+//         return `${super.describe()} This is describe emp`;
+//     }
+// }
+
+// let employee = new Employee("Đoàn", "Thịnh", "7 Nghiệp");
+// console.log("Get full Name", employee.getFullName())
+// console.log("Discribe", employee.describe())
+// lesson 38
+// class Circle {
+//     static pi: number = 3.14; // properties
+//     public test: number = 10;
+
+//     static calculateAre(radius: number) { // methods
+//         return this.pi * radius * radius;
+//     }
+// }
+
+// let t = new Circle();
+// console.log("test", t.test)// không thể truy cập thuộc tính static
+// // sự khác biệt của static
+// console.log(Circle.pi)
+// console.log(Circle.calculateAre(4))
+// lesson 39
+// abstract class Employee {
+//     constructor(private firstName: string, private lastName: string) {
+//     }
+//     abstract getSalary(): number; // abstract method
+
+//     getFullName(): string { // normal method
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+
+//     compensationStatement(): string {
+//         return `${this.getFullName()} makes ${this.getSalary()} a month`;
+//     }
+// }
+// //abstract hiểu như là khuôn mẫu
+// // cách dùng abstract
+
+// class FullTimeEmployee extends Employee {
+//     constructor(firstName: string, lastName: string, private salary: number) {
+//         super(firstName, lastName);
+//     }
+
+//     //thêm getsalảy
+//     getSalary(): number {
+//         return this.salary;
+//     }
+// }
+
+// class Contractor extends Employee {
+//     constructor(firstName: string, lastName: string, private rate: number, private hours: number) {
+//         super(firstName, lastName);
+//     }
+
+//     getSalary(): number {
+//         return this.rate * this.hours;
+//     }
+// }
+
+// const test1 = new FullTimeEmployee("Đoàn", "Thịnh", 23);
+// const test2 = new Contractor("Đoàn", "Thịnh", 2, 6);
+
+// console.log("test1: ", test1.compensationStatement())
+// console.log("test2: ", test2.getSalary())
